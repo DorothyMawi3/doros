@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reading | Doros</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="reader.js" defer></script>
+</head>
+
+<body>
+  <main>
+
+    <!-- Book Information -->
+    <h1>My 365/366 Thought Life</h1>
+    <p>By DawhTe</p>
+
+    <!-- Reading Introduction -->
+    <h2>Welcome to Your Reading Journey</h2>
+
+    <p>
+      Every day is an opportunity to learn,
+      reflect, and grow.
+    </p>
+
+    <!-- Accessible Reading Controls -->
+    <div
+      class="reading-controls"
+      role="group"
+      aria-label="Reading font size settings"
+    >
+      <p>Reading Settings</p>
+
+      <button
+        type="button"
+        id="decrease-font"
+        aria-label="Decrease reading text size"
+      >
+        A−
+      </button>
+
+      <button
+        type="button"
+        id="increase-font"
+        aria-label="Increase reading text size"
+      >
+        A+
+      </button>
+    </div>
+
+    <!-- Daily Reading Content -->
+    <section class="reading-content">
+      <h2>Day 1 — A New Beginning</h2>
+
+      <!-- Bookmark Button -->
+      <button
+        type="button"
+        id="bookmark-button"
+        aria-pressed="false"
+      >
+        ☆ Save Bookmark
+      </button>
+
+      <p>
+        Your first reading entry will appear here.
+        This is placeholder text until we add
+        the original content from your book.
+      </p>
+    </section>
+
+    <!-- Daily Reading Navigation -->
+    <nav
+      class="day-navigation"
+      aria-label="Daily reading navigation"
+    >
+      <button
+        type="button"
+        id="previous-day"
+        disabled
+      >
+        ← Previous Day
+      </button>
+
+      <span id="current-day">
+        Day 1 of 365
+      </span>
+
+      <button
+        type="button"
+        id="next-day"
+      >
+        Next Day →
+      </button>
+    </nav>
+
+    <!-- Back to Homepage -->
+    <a href="index.html">Back to Home</a>
+
+  </main>
+</body>
+</html>

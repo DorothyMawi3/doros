@@ -1,0 +1,251 @@
+/* Doros - Brand Color Palette */
+
+:root {
+  --navy: #1B2A49;
+  --gold: #C5A46D;
+  --warm-white: #FAF9F6;
+  --silver: #C4C9D0;
+  --red: #A52A35;
+  --text-dark: #242424;
+}
+
+/* Doros - Homepage Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--warm-white);
+  color: var(--text-dark);
+  text-align: center;
+  margin: 0;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* Doros - Buttons */
+
+button {
+  background-color: var(--navy);
+  color: white;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #30456b;
+  border-color: var(--gold);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+
+/* Doros - Reading Page */
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main p {
+  line-height: 1.8;
+}
+
+main a {
+  color: #283b62;
+  font-weight: bold;
+}
+
+
+/* Doros - Book Reading Content */
+
+.reading-content {
+  background-color: #ffffff;
+  border: 1px solid #e8e5df;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.reading-content h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #283b62;
+}
+
+.reading-content p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #333333;
+}
+
+@media (max-width: 600px) {
+  .reading-content {
+    padding: 20px;
+  }
+}
+
+
+/* Doros - Reading Page Details */
+
+main > h1 {
+  color: var(--navy);
+}
+
+main > h2 {
+  color: var(--navy);
+}
+
+main > a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  border-radius: 6px;
+}
+
+main > a:hover {
+  background-color: #eee9df;
+}
+
+main > a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+
+/* Doros - Reading Settings */
+
+.reading-controls {
+  background-color: #F2EFE9;
+  border: 1px solid var(--silver);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.reading-controls p {
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.reading-controls button {
+  min-width: 55px;
+  min-height: 44px;
+  margin: 0 5px;
+  padding: 10px 14px;
+  font-size: 18px;
+}
+
+
+/* Doros - Bookmark Button */
+
+#bookmark-button {
+  background-color: var(--warm-white);
+  color: var(--navy);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#bookmark-button:hover {
+  background-color: #F2E8D8;
+}
+
+#bookmark-button[aria-pressed="true"] {
+  background-color: var(--navy);
+  color: white;
+  border-color: var(--gold);
+}
+
+#bookmark-button:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+
+
+/* Doros - Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 24px 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  main {
+    padding: 12px;
+  }
+
+  .reading-content {
+    padding: 20px 16px;
+    margin: 24px auto;
+  }
+
+  .reading-controls {
+    padding: 16px 10px;
+  }
+
+  .day-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .day-navigation button {
+    padding: 12px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  #current-day {
+    width: 100%;
+    order: -1;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+}
