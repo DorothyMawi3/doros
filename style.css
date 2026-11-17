@@ -1,4 +1,7 @@
-/* Doros - Brand Color Palette */
+
+/* ==========================================
+   DOROS — BRAND COLOR PALETTE
+========================================== */
 
 :root {
   --navy: #1B2A49;
@@ -7,9 +10,14 @@
   --silver: #C4C9D0;
   --red: #A52A35;
   --text-dark: #242424;
+  --orange: #E87500;
+  --christmas-green: #176B42;
 }
 
-/* Doros - Homepage Styles */
+
+/* ==========================================
+   DOROS — HOMEPAGE STYLES
+========================================== */
 
 body {
   font-family: Arial, sans-serif;
@@ -36,7 +44,9 @@ p {
 }
 
 
-/* Doros - Buttons */
+/* ==========================================
+   DOROS — BUTTONS
+========================================== */
 
 button {
   background-color: var(--navy);
@@ -47,8 +57,10 @@ button {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease,
-              border-color 0.2s ease;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 button:hover {
@@ -61,8 +73,19 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+/* Make disabled buttons visibly inactive */
+button:disabled,
+button:disabled:hover {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background-color: var(--navy);
+  border-color: var(--navy);
+}
 
-/* Doros - Reading Page */
+
+/* ==========================================
+   DOROS — READING PAGE
+========================================== */
 
 main {
   max-width: 700px;
@@ -80,7 +103,9 @@ main a {
 }
 
 
-/* Doros - Book Reading Content */
+/* ==========================================
+   DOROS — BOOK READING CONTENT
+========================================== */
 
 .reading-content {
   background-color: #ffffff;
@@ -98,19 +123,15 @@ main a {
 }
 
 .reading-content p {
-  font-size: 18px;
+  font-size: inherit;
   line-height: 1.9;
   color: #333333;
 }
 
-@media (max-width: 600px) {
-  .reading-content {
-    padding: 20px;
-  }
-}
 
-
-/* Doros - Reading Page Details */
+/* ==========================================
+   DOROS — READING PAGE DETAILS
+========================================== */
 
 main > h1 {
   color: var(--navy);
@@ -140,7 +161,9 @@ main > a:focus-visible {
 }
 
 
-/* Doros - Reading Settings */
+/* ==========================================
+   DOROS — READING SETTINGS
+========================================== */
 
 .reading-controls {
   background-color: #F2EFE9;
@@ -168,7 +191,209 @@ main > a:focus-visible {
 }
 
 
-/* Doros - Bookmark Button */
+/* ==========================================
+   DOROS — CHRISTMAS MUSIC PLAYER
+========================================== */
+
+.music-player {
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 30px 24px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(27, 42, 73, 0.06);
+}
+
+.music-player h2 {
+  color: var(--red);
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* White snowflakes, red heading */
+.music-player h2 span {
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.music-player > p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#music-track-name {
+  display: inline-block;
+  background-color: #F5E8D0;
+  border: 1px solid #F5E8D0;
+  border-radius: 20px;
+  padding: 8px 18px;
+  margin: 12px auto 24px;
+  color: var(--red);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#music-play-pause {
+  display: block;
+  min-height: 48px;
+  min-width: 180px;
+  margin: 0 auto 24px;
+  padding: 12px 24px;
+  background-color: var(--christmas-green);
+  color: #ffffff;
+  border: 2px solid var(--christmas-green);
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#music-play-pause:hover {
+  background-color: #105232;
+  border-color: #105232;
+}
+
+#music-play-pause.is-playing {
+  background-color: var(--christmas-green);
+  border-color: var(--christmas-green);
+  color: #ffffff;
+}
+
+#music-play-pause.is-playing:hover {
+  background-color: #105232;
+  border-color: #105232;
+}
+
+.music-volume-control {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.music-volume-control label {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#music-volume {
+  display: block;
+  width: 100%;
+  height: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  accent-color: var(--christmas-green);
+}
+
+#music-volume:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 5px;
+}
+
+#music-status {
+  margin: 18px auto 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ==========================================
+   DOROS — JUMP TO DAY SELECTOR
+========================================== */
+
+.day-selector {
+  background-color: #ffffff;
+  border: 1px solid #e8e5df;
+  border-radius: 16px;
+  padding: 30px 24px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(27, 42, 73, 0.04);
+}
+
+.day-selector h2 {
+  color: var(--navy);
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.day-selector > p {
+  color: var(--text-dark);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.day-selector-controls {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.day-selector-controls label {
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 600;
+  align-self: center;
+}
+
+#jump-to-day {
+  box-sizing: border-box;
+  min-width: 160px;
+  min-height: 48px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  color: var(--navy);
+  border: 2px solid var(--silver);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#jump-to-day:hover {
+  border-color: var(--gold);
+}
+
+#jump-to-day:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Orange Go to Day button */
+#go-to-day {
+  min-height: 48px;
+  padding: 12px 24px;
+  background-color: var(--orange);
+  color: #ffffff;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#go-to-day:hover {
+  background-color: #CC6500;
+  border-color: #CC6500;
+}
+
+#go-to-day:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   DOROS — BOOKMARK BUTTON
+========================================== */
 
 #bookmark-button {
   background-color: var(--warm-white);
@@ -198,7 +423,195 @@ main > a:focus-visible {
 }
 
 
-/* Doros - Mobile Responsive Design */
+/* ==========================================
+   DOROS — READING PROGRESS TRACKER
+========================================== */
+
+.reading-progress {
+  background-color: #ffffff;
+  border: 1px solid #e8e5df;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.reading-progress h2 {
+  color: var(--navy);
+  font-size: 24px;
+  margin-top: 0;
+}
+
+#progress-text {
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#reading-progress-bar {
+  display: block;
+  width: 100%;
+  height: 18px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  accent-color: var(--gold);
+}
+
+#reading-progress-bar::-webkit-progress-bar {
+  background-color: #F2EFE9;
+  border-radius: 20px;
+}
+
+#reading-progress-bar::-webkit-progress-value {
+  background-color: var(--gold);
+  border-radius: 20px;
+}
+
+#reading-progress-bar::-moz-progress-bar {
+  background-color: var(--gold);
+  border-radius: 20px;
+}
+
+#progress-percentage {
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   DOROS — READING COMPLETION JOURNAL
+========================================== */
+
+.reading-journal {
+  background-color: #ffffff;
+  border: 1px solid #e8e5df;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.reading-journal h2 {
+  color: var(--navy);
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.reading-journal label {
+  display: block;
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+}
+
+#reading-date {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  padding: 12px;
+  border: 1px solid var(--silver);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text-dark);
+  background-color: white;
+}
+
+#reading-date:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+#reading-status {
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 18px 0;
+}
+
+#remove-read-date {
+  background-color: var(--warm-white);
+  color: var(--red);
+  border: 2px solid var(--red);
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+#remove-read-date:hover {
+  background-color: #F8E8E8;
+}
+
+#remove-read-date[hidden] {
+  display: none;
+}
+
+
+/* ==========================================
+   DOROS — MARK AS READ BUTTON
+========================================== */
+
+#mark-as-read {
+  background-color: var(--navy);
+  color: white;
+  border: 2px solid var(--navy);
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#mark-as-read:hover {
+  background-color: #30456b;
+  border-color: #30456b;
+}
+
+#mark-as-read.is-read {
+  background-color: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
+
+#mark-as-read.is-read:hover {
+  background-color: #CC6500;
+  border-color: #CC6500;
+}
+
+
+/* ==========================================
+   DOROS — DAILY NAVIGATION
+========================================== */
+
+.day-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px auto 10px;
+}
+
+.day-navigation button {
+  min-height: 44px;
+}
+
+#current-day {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+
+/* ==========================================
+   DOROS — MOBILE RESPONSIVE DESIGN
+========================================== */
 
 @media (max-width: 600px) {
 
@@ -227,11 +640,66 @@ main > a:focus-visible {
     padding: 16px 10px;
   }
 
+  .music-player {
+    padding: 22px 16px;
+    margin: 24px auto;
+  }
+
+  .music-player h2 {
+    font-size: 22px;
+  }
+
+  .music-player h2 span {
+    margin: 0 3px;
+  }
+
+  #music-play-pause {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .music-volume-control {
+    max-width: 240px;
+  }
+
+  .day-selector {
+    padding: 22px 16px;
+    margin: 24px auto;
+  }
+
+  .day-selector h2 {
+    font-size: 22px;
+  }
+
+  .day-selector-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .day-selector-controls label {
+    align-self: flex-start;
+  }
+
+  #jump-to-day {
+    width: 100%;
+  }
+
+  #go-to-day {
+    width: 100%;
+  }
+
+  .reading-progress {
+    padding: 20px 16px;
+    margin: 24px auto;
+  }
+
+  .reading-journal {
+    padding: 20px 16px;
+    margin: 24px auto;
+  }
+
   .day-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     gap: 12px;
   }
 
@@ -244,8 +712,10 @@ main > a:focus-visible {
   #current-day {
     width: 100%;
     order: -1;
-    font-weight: 600;
-    color: var(--navy);
+  }
+
+  #mark-as-read {
+    min-height: 44px;
   }
 
 }

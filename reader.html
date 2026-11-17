@@ -8,17 +8,20 @@
   <title>Reading | Doros</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="book-data.js" defer></script>
   <script src="reader.js" defer></script>
 </head>
 
 <body>
   <main>
 
-    <!-- Book Information -->
+    <!-- ======================================
+         BOOK INFORMATION
+    ======================================= -->
+
     <h1>My 365/366 Thought Life</h1>
     <p>By DawhTe</p>
 
-    <!-- Reading Introduction -->
     <h2>Welcome to Your Reading Journey</h2>
 
     <p>
@@ -26,7 +29,11 @@
       reflect, and grow.
     </p>
 
-    <!-- Accessible Reading Controls -->
+
+    <!-- ======================================
+         READING FONT SIZE CONTROLS
+    ======================================= -->
+
     <div
       class="reading-controls"
       role="group"
@@ -51,11 +58,126 @@
       </button>
     </div>
 
-    <!-- Daily Reading Content -->
+
+    <!-- ======================================
+         DOROS CHRISTMAS MUSIC PLAYER
+    ======================================= -->
+
+    <section
+      class="music-player"
+      aria-labelledby="music-player-heading"
+    >
+
+      <h2 id="music-player-heading">
+        <span aria-hidden="true">❄</span>
+        DOROS Christmas Music
+        <span aria-hidden="true">❄</span>
+      </h2>
+
+      <p>
+        Enjoy a peaceful Christmas atmosphere
+        while you read.
+      </p>
+
+      <p id="music-track-name">
+        Lofi Christmas — ZephiraMusic
+      </p>
+
+      <audio
+        id="doros-audio"
+        preload="none"
+        loop
+      >
+        <source
+          src="music/library-ambience.mp3"
+          type="audio/mpeg"
+        >
+        Your browser does not support audio playback.
+      </audio>
+
+      <button
+        type="button"
+        id="music-play-pause"
+        aria-label="Play background music"
+      >
+        ▶ Play Music
+      </button>
+
+      <div class="music-volume-control">
+
+        <label for="music-volume">
+          Volume
+        </label>
+
+        <input
+          type="range"
+          id="music-volume"
+          min="0"
+          max="100"
+          value="35"
+          aria-label="Music volume"
+        >
+
+      </div>
+
+      <p
+        id="music-status"
+        role="status"
+        aria-live="polite"
+      >
+        Music is paused.
+      </p>
+
+    </section>
+
+
+    <!-- ======================================
+         JUMP TO DAY SELECTOR
+    ======================================= -->
+
+    <section
+      class="day-selector"
+      aria-labelledby="day-selector-heading"
+    >
+
+      <h2 id="day-selector-heading">
+        📖 Jump to Your Reading
+      </h2>
+
+      <p>
+        Select any day from your reading journey.
+      </p>
+
+      <div class="day-selector-controls">
+
+        <label for="jump-to-day">
+          Select a Day
+        </label>
+
+        <select id="jump-to-day">
+          <option value="1">Day 1</option>
+        </select>
+
+        <button
+          type="button"
+          id="go-to-day"
+        >
+          Go to Day
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================
+         DAILY READING CONTENT
+    ======================================= -->
+
     <section class="reading-content">
+
       <h2>Day 1 — A New Beginning</h2>
 
-      <!-- Bookmark Button -->
       <button
         type="button"
         id="bookmark-button"
@@ -64,18 +186,104 @@
         ☆ Save Bookmark
       </button>
 
-      <p>
-        Your first reading entry will appear here.
-        This is placeholder text until we add
-        the original content from your book.
-      </p>
+      <div id="book-text">
+        <p>Loading your reading...</p>
+      </div>
+
     </section>
 
-    <!-- Daily Reading Navigation -->
+
+    <!-- ======================================
+         READING PROGRESS TRACKER
+    ======================================= -->
+
+    <section
+      class="reading-progress"
+      aria-labelledby="reading-progress-heading"
+    >
+
+      <h2 id="reading-progress-heading">
+        Your Reading Progress
+      </h2>
+
+      <p id="progress-text">
+        0 of 366 days completed
+      </p>
+
+      <progress
+        id="reading-progress-bar"
+        value="0"
+        max="366"
+        aria-label="Reading completion progress"
+      ></progress>
+
+      <p id="progress-percentage">
+        0% completed
+      </p>
+
+    </section>
+
+
+    <!-- ======================================
+         READING COMPLETION JOURNAL
+    ======================================= -->
+
+    <section
+      class="reading-journal"
+      aria-labelledby="reading-journal-heading"
+    >
+
+      <h2 id="reading-journal-heading">
+        My Reading Journal
+      </h2>
+
+      <p>
+        Record the day you completed your reading.
+      </p>
+
+      <label for="reading-date">
+        Date Read
+      </label>
+
+      <input
+        type="date"
+        id="reading-date"
+      >
+
+      <button
+        type="button"
+        id="mark-as-read"
+        aria-pressed="false"
+      >
+        Mark as Read
+      </button>
+
+      <p
+        id="reading-status"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+      <button
+        type="button"
+        id="remove-read-date"
+        hidden
+      >
+        Remove Reading Record
+      </button>
+
+    </section>
+
+
+    <!-- ======================================
+         DAILY READING NAVIGATION
+    ======================================= -->
+
     <nav
       class="day-navigation"
       aria-label="Daily reading navigation"
     >
+
       <button
         type="button"
         id="previous-day"
@@ -85,7 +293,7 @@
       </button>
 
       <span id="current-day">
-        Day 1 of 365
+        Day 1 of 366
       </span>
 
       <button
@@ -94,10 +302,17 @@
       >
         Next Day →
       </button>
+
     </nav>
 
-    <!-- Back to Homepage -->
-    <a href="index.html">Back to Home</a>
+
+    <!-- ======================================
+         BACK TO HOMEPAGE
+    ======================================= -->
+
+    <a href="index.html">
+      Back to Home
+    </a>
 
   </main>
 </body>
