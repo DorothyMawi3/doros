@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Reading | Doros</title>
+  <title>Reading | DOROS</title>
 
   <link rel="stylesheet" href="style.css">
   <script src="book-data.js" defer></script>
@@ -19,44 +19,113 @@
          BOOK INFORMATION
     ======================================= -->
 
-    <h1>My 365/366 Thought Life</h1>
-    <p>By DawhTe</p>
+    <header class="reader-introduction">
+      <h1>My 365/366 Thought Life</h1>
+      <p>By DawhTe</p>
 
-    <h2>Welcome to Your Reading Journey</h2>
+      <h2>Welcome to Your Reading Journey</h2>
 
-    <p>
-      Every day is an opportunity to learn,
-      reflect, and grow.
-    </p>
+      <p>
+        Every day is an opportunity to learn,
+        reflect, and grow.
+      </p>
+
+      <p>
+        Read, reflect, and enjoy music —
+        all in one place.
+      </p>
+    </header>
 
 
     <!-- ======================================
-         READING FONT SIZE CONTROLS
+         JUMP TO DAY SELECTOR
     ======================================= -->
 
-    <div
-      class="reading-controls"
-      role="group"
-      aria-label="Reading font size settings"
+    <section
+      class="day-selector"
+      aria-labelledby="day-selector-heading"
     >
-      <p>Reading Settings</p>
+
+      <h2 id="day-selector-heading">
+        📖 Jump to Your Reading
+      </h2>
+
+      <p>
+        Select any day from your reading journey.
+      </p>
+
+      <div class="day-selector-controls">
+
+        <label for="jump-to-day">
+          Select a Day
+        </label>
+
+        <select id="jump-to-day">
+          <option value="1">Day 1</option>
+        </select>
+
+        <button
+          type="button"
+          id="go-to-day"
+        >
+          Go to Day
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================
+         DAILY READING CONTENT
+    ======================================= -->
+
+    <section class="reading-content">
+
+      <h2>Day 1 — A New Beginning</h2>
+
+      <!-- Reading text size controls -->
+      <div
+        class="reading-controls"
+        role="group"
+        aria-label="Reading text size settings"
+      >
+
+        <span class="text-size-label">
+          Text Size
+        </span>
+
+        <button
+          type="button"
+          id="decrease-font"
+          aria-label="Decrease reading text size"
+        >
+          A−
+        </button>
+
+        <button
+          type="button"
+          id="increase-font"
+          aria-label="Increase reading text size"
+        >
+          A+
+        </button>
+
+      </div>
 
       <button
         type="button"
-        id="decrease-font"
-        aria-label="Decrease reading text size"
+        id="bookmark-button"
+        aria-pressed="false"
       >
-        A−
+        ☆ Save Bookmark
       </button>
 
-      <button
-        type="button"
-        id="increase-font"
-        aria-label="Increase reading text size"
-      >
-        A+
-      </button>
-    </div>
+      <div id="book-text">
+        <p>Loading your reading...</p>
+      </div>
+
+    </section>
 
 
     <!-- ======================================
@@ -67,6 +136,10 @@
       class="music-player"
       aria-labelledby="music-player-heading"
     >
+
+      <h2 class="background-music-heading">
+        Background Music
+      </h2>
 
       <h2 id="music-player-heading">
         <span aria-hidden="true">❄</span>
@@ -127,68 +200,6 @@
       >
         Music is paused.
       </p>
-
-    </section>
-
-
-    <!-- ======================================
-         JUMP TO DAY SELECTOR
-    ======================================= -->
-
-    <section
-      class="day-selector"
-      aria-labelledby="day-selector-heading"
-    >
-
-      <h2 id="day-selector-heading">
-        📖 Jump to Your Reading
-      </h2>
-
-      <p>
-        Select any day from your reading journey.
-      </p>
-
-      <div class="day-selector-controls">
-
-        <label for="jump-to-day">
-          Select a Day
-        </label>
-
-        <select id="jump-to-day">
-          <option value="1">Day 1</option>
-        </select>
-
-        <button
-          type="button"
-          id="go-to-day"
-        >
-          Go to Day
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- ======================================
-         DAILY READING CONTENT
-    ======================================= -->
-
-    <section class="reading-content">
-
-      <h2>Day 1 — A New Beginning</h2>
-
-      <button
-        type="button"
-        id="bookmark-button"
-        aria-pressed="false"
-      >
-        ☆ Save Bookmark
-      </button>
-
-      <div id="book-text">
-        <p>Loading your reading...</p>
-      </div>
 
     </section>
 
